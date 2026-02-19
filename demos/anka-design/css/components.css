@@ -1,0 +1,319 @@
+/* ====================================================================
+    ANKA DESIGN SYSTEM | COMPONENTS
+====================================================================
+*/
+
+/* 1. BUTTONS */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    transition: all 0.3s var(--anka-ease);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: var(--bg-0);
+    border: 1px solid var(--accent-primary);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 0 20px var(--accent-dim);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* 2. NAVIGATION BAR */
+.nav-container {
+    height: var(--header-height);
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+    color: var(--text-primary);
+}
+
+.menu-trigger {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-trigger::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent-primary);
+    transition: width 0.3s;
+}
+
+.menu-trigger:hover::before { width: 40px; }
+
+/* 3. FULL SCREEN MENU */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-overlay);
+    z-index: var(--z-modal);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s var(--anka-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-overlay.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.editorial-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-link {
+    font-family: var(--font-main);
+    font-size: var(--display-1);
+    color: var(--text-muted);
+    font-weight: 700;
+    line-height: 1.1;
+    transition: color 0.3s, transform 0.3s var(--anka-ease);
+    display: flex;
+    align-items: baseline;
+}
+
+.nav-link span {
+    font-size: 1rem;
+    color: var(--accent-primary);
+    margin-right: 20px;
+    font-weight: 400;
+    transform: translateY(-20px);
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    transform: translateX(40px);
+}
+
+/* 4. HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: var(--header-height);
+}
+
+.hero-content {
+    max-width: 1000px;
+    z-index: var(--z-base);
+}
+
+/* 5. PORTFOLIO GRID (MASONRY) */
+.portfolio-grid {
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: var(--space-12);
+}
+
+.portfolio-card {
+    grid-column: span 12;
+    position: relative;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-1);
+    transition: border-color 0.4s;
+    group: hover;
+}
+
+@media (min-width: 768px) {
+    .portfolio-card { grid-column: span 6; }
+    .portfolio-card.featured { grid-column: span 12; }
+}
+
+.portfolio-card:hover { border-color: var(--border-accent); }
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured .card-image { aspect-ratio: 21/9; }
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.8);
+    transition: transform 0.8s var(--anka-ease), filter 0.8s;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(1);
+}
+
+.card-meta {
+    padding: var(--space-6);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* 6. PROCESS TIMELINE */
+.timeline {
+    position: relative;
+    border-left: 1px solid var(--border-strong);
+    padding-left: var(--space-12);
+    margin-left: var(--space-4);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-20);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-12) - 10px);
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-0);
+    border: 2px solid var(--accent-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--accent-dim);
+}
+
+/* 7. PRICING CARDS */
+.pricing-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-8);
+}
+
+.pricing-card {
+    background: var(--bg-1);
+    border: 1px solid var(--border-subtle);
+    padding: var(--space-8);
+    transition: transform 0.4s var(--anka-ease);
+}
+
+.pricing-card.premium {
+    border: 1px solid var(--accent-primary);
+    background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
+}
+
+.pricing-card:hover { transform: translateY(-10px); }
+
+.price-list li {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+}
+
+.price-list li::before {
+    content: "•";
+    color: var(--accent-primary);
+    margin-right: 10px;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+/* 8. FORMS */
+.form-group {
+    position: relative;
+    margin-bottom: var(--space-8);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--space-4) 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-strong);
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-family: var(--font-main);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus { border-color: var(--accent-primary); }
+
+.form-label {
+    position: absolute;
+    left: 0;
+    top: var(--space-4);
+    color: var(--text-muted);
+    transition: all 0.3s var(--anka-ease);
+    pointer-events: none;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:valid ~ .form-label {
+    top: -10px;
+    font-size: 0.75rem;
+    color: var(--accent-primary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* 9. FOOTER */
+.footer {
+    border-top: 1px solid var(--border-subtle);
+    padding: var(--space-12) 0;
+    margin-top: var(--space-24);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-12);
+}
+
+.footer-link {
+    display: block;
+    margin-bottom: var(--space-2);
+    color: var(--text-muted);
+}
+
+.footer-link:hover { color: var(--accent-primary); }

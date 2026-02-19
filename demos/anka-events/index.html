@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Nightlife events in Phuket — curated nights, VIP bookings, and villa parties." />
+
+  <title>ANKA EVENTS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Background ambience -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <!-- Top progress bar -->
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="ANKA Events Home">
+        <span class="brand__mark" aria-hidden="true">◼︎</span>
+        <span class="brand__text">ANKA<span class="brand__accent">EVENTS</span></span>
+      </a>
+
+      <nav class="nav__links" data-nav>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="iconbtn" id="soundBtn" type="button" aria-pressed="false" title="Pulse mode">
+          <span class="iconbtn__dot"></span>
+          <span class="iconbtn__text">Pulse</span>
+        </button>
+
+        <button class="btn btn--primary" data-open-booking type="button">
+          Book a Table <span aria-hidden="true">→</span>
+        </button>
+
+        <!-- IMPORTANT: required by main.js -->
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- IMPORTANT: required by main.js -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="container mobile__inner">
+        <a href="#events">Events</a>
+        <a href="#venues">Venues</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn--primary w-full" data-open-booking type="button">
+          Book a Table →
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Moving energy strip -->
+    <section class="energyStrip" aria-label="ANKA ticker">
+      <div class="energyStrip__track">
+        <span>ANKA EVENTS</span><span>•</span><span>CURATED ENERGY</span><span>•</span>
+        <span>ROOFTOP SESSIONS</span><span>•</span><span>PRIVATE VILLAS</span><span>•</span>
+        <span>WAREHOUSE NIGHTS</span><span>•</span><span>DEEP ATMOSPHERE</span><span>•</span>
+        <span>VIP TABLES</span><span>•</span>
+        <!-- repeat for seamless loop -->
+        <span>ANKA EVENTS</span><span>•</span><span>CURATED ENERGY</span><span>•</span>
+        <span>ROOFTOP SESSIONS</span><span>•</span><span>PRIVATE VILLAS</span><span>•</span>
+        <span>WAREHOUSE NIGHTS</span><span>•</span><span>DEEP ATMOSPHERE</span><span>•</span>
+        <span>VIP TABLES</span><span>•</span>
+      </div>
+    </section>
+
+    <!-- HERO (content from your original index) -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <div class="pill">
+            <span class="pill__dot"></span>
+            <span>Phuket • Nightlife Events • VIP Experiences</span>
+          </div>
+
+          <h1>Where the night <span class="neon">comes alive</span>.</h1>
+
+          <p class="lead">
+            Premium events, curated DJs, and unforgettable villa &amp; club nights — built for a sleek, modern nightlife brand.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#events">Explore Events <span aria-hidden="true">↓</span></a>
+            <button class="btn btn--ghost" data-open-booking type="button">VIP Booking</button>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__num" data-count="48">0</div>
+              <div class="stat__label">Events / month</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" data-count="12">0</div>
+              <div class="stat__label">Partner venues</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" data-count="3200">0</div>
+              <div class="stat__label">Guests hosted</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card reveal">
+          <div class="card glass">
+            <div class="card__top">
+              <div class="card__title">
+                <span class="badge">Tonight</span>
+                <h3>Neon Terrace Session</h3>
+                <p class="muted">Deep House • Rooftop • 10:00 PM</p>
+              </div>
+              <button class="iconbtn iconbtn--circle" data-open-event="e1" title="View details" type="button">i</button>
+            </div>
+
+            <div class="card__poster" role="img" aria-label="Nightlife poster"></div>
+
+            <div class="card__bottom">
+              <div class="chips">
+                <span class="chip">VIP tables</span>
+                <span class="chip">Dress code</span>
+                <span class="chip">Guest list</span>
+              </div>
+
+              <div class="card__actions">
+                <button class="btn btn--primary w-full" data-open-event="e1" type="button">View Event →</button>
+                <!-- FIX: no inline onclick; use the same hook everywhere -->
+                <button class="btn btn--ghost w-full" data-open-booking type="button">Reserve</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS (structure like your “grid/search/filter/bpm” layout) -->
+    <section class="section" id="events">
+      <div class="container">
+        <div class="control glass reveal">
+          <div class="control__left">
+            <div class="pill"><span class="pill__dot"></span><span>UPCOMING PROGRAM • LIVE UPDATES</span></div>
+            <h2 class="control__title">Upcoming Events</h2>
+            <p class="muted control__desc">
+              Search, filter by vibe, open details — and trigger Pulse Mode for a subtle “alive” feel.
+            </p>
+          </div>
+
+          <div class="control__right">
+            <label class="control__field">
+              <span class="muted">Search</span>
+              <input id="eventSearch" class="control__input" type="search" placeholder="e.g. rooftop, villa, techno…" />
+            </label>
+
+            <div class="control__row">
+              <button class="btn btn--primary" data-open-booking type="button">
+                Quick Booking <span aria-hidden="true">→</span>
+              </button>
+              <button class="btn btn--ghost" id="resetBtn" type="button">Reset</button>
+            </div>
+
+            <div class="control__bpm">
+              <div class="muted">Pulse BPM</div>
+              <input id="bpmRange" type="range" min="70" max="160" value="128" />
+              <div class="control__bpmVal"><span id="bpmVal">128</span> BPM</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__head reveal" style="margin-top:18px;">
+          <div>
+            <h3>Browse</h3>
+            <p class="muted">Click any card for details. Or open the booking modal instantly.</p>
+          </div>
+
+          <div class="filters" role="tablist" aria-label="Event filters">
+            <button class="filter is-active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="house" type="button">House</button>
+            <button class="filter" data-filter="techno" type="button">Techno</button>
+            <button class="filter" data-filter="villa" type="button">Villa</button>
+            <button class="filter" data-filter="vip" type="button">VIP</button>
+          </div>
+        </div>
+
+        <!-- IMPORTANT: #eventsGrid is used by main.js search/filter -->
+        <div class="grid events" id="eventsGrid">
+          <article class="event reveal"
+               data-tags="house vip rooftop"
+               data-event-id="e1"
+               tabindex="0"
+               role="button"
+               aria-label="Open Neon Terrace Session details">
+            <div class="event__img event__img--1" aria-hidden="true"></div>
+            <div class="event__body">
+              <div class="event__meta">
+                <span class="badge">Fri</span>
+                <span class="muted">Rooftop • 10:00 PM</span>
+              </div>
+              <h3>Neon Terrace Session</h3>
+              <p class="muted">Deep house, skyline views, curated cocktails, VIP tables.</p>
+              <div class="event__foot">
+                <span class="price">฿ 590</span>
+                <button class="btn btn--ghost" data-open-event="e1" type="button">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="event reveal"
+              data-tags="techno warehouse"
+              data-event-id="e2"
+              tabindex="0"
+              role="button"
+              aria-label="Open Midnight Circuit details">
+
+            <div class="event__img event__img--2" aria-hidden="true"></div>
+            <div class="event__body">
+              <div class="event__meta">
+                <span class="badge badge--alt">Sat</span>
+                <span class="muted">Warehouse • 11:30 PM</span>
+              </div>
+              <h3>Midnight Circuit</h3>
+              <p class="muted">Peak-time techno, lasers, heavy bass, late-night energy.</p>
+              <div class="event__foot">
+                <span class="price">฿ 690</span>
+                <button class="btn btn--ghost" data-open-event="e2" type="button">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="event reveal"
+              data-tags="villa vip private"
+              data-event-id="e3"
+              tabindex="0"
+              role="button"
+              aria-label="Open Moonlit Villa Soirée details">
+
+            <div class="event__img event__img--3" aria-hidden="true"></div>
+            <div class="event__body">
+              <div class="event__meta">
+                <span class="badge">Sun</span>
+                <span class="muted">Private Villa • 8:00 PM</span>
+              </div>
+              <h3>Moonlit Villa Soirée</h3>
+              <p class="muted">Invitation-only, poolside ambience, concierge service.</p>
+              <div class="event__foot">
+                <span class="price">฿ 1,490</span>
+                <button class="btn btn--ghost" data-open-event="e3" type="button">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="event reveal"
+              data-tags="house villa beach"
+              data-event-id="e4"
+              tabindex="0"
+              role="button"
+              aria-label="Open Sunset Groove details">
+
+            <div class="event__img event__img--4" aria-hidden="true"></div>
+            <div class="event__body">
+              <div class="event__meta">
+                <span class="badge badge--alt">Wed</span>
+                <span class="muted">Beach Club • 6:00 PM</span>
+              </div>
+              <h3>Sunset Groove</h3>
+              <p class="muted">Organic / afro house, golden hour, perfect for groups.</p>
+              <div class="event__foot">
+                <span class="price">฿ 450</span>
+                <button class="btn btn--ghost" data-open-event="e4" type="button">Details</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENUES (content from your original index) -->
+    <section class="section section--alt" id="venues">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <h2>Partner Venues</h2>
+            <p class="muted">Showcase key places: rooftop, beach club, villa, warehouse.</p>
+          </div>
+        </div>
+
+        <div class="grid venues">
+          <div class="venue glass reveal">
+            <div class="venue__icon" aria-hidden="true">⌁</div>
+            <h3>Rooftop Terrace</h3>
+            <p class="muted">Skyline views, premium cocktails, dress code enforced.</p>
+          </div>
+
+          <div class="venue glass reveal">
+            <div class="venue__icon" aria-hidden="true">◌</div>
+            <h3>Warehouse Room</h3>
+            <p class="muted">Immersive lighting, hard-hitting system, late closing.</p>
+          </div>
+
+          <div class="venue glass reveal">
+            <div class="venue__icon" aria-hidden="true">∿</div>
+            <h3>Private Villas</h3>
+            <p class="muted">Concierge, poolside lounge, invite-only access.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY (content from your original index) -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <h2>Gallery</h2>
+            <p class="muted">Click a tile to open the lightbox.</p>
+          </div>
+        </div>
+
+        <div class="masonry">
+          <button class="shot shot--1 reveal" data-lightbox="1" aria-label="Open image 1"></button>
+          <button class="shot shot--2 reveal" data-lightbox="2" aria-label="Open image 2"></button>
+          <button class="shot shot--3 reveal" data-lightbox="3" aria-label="Open image 3"></button>
+          <button class="shot shot--4 reveal" data-lightbox="4" aria-label="Open image 4"></button>
+          <button class="shot shot--5 reveal" data-lightbox="5" aria-label="Open image 5"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKETS (content from your original index) -->
+    <section class="section section--alt" id="tickets">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <h2>Tickets &amp; Packages</h2>
+            <p class="muted">Interactive pricing: adjust guests and see totals.</p>
+          </div>
+        </div>
+
+        <div class="grid pricing">
+          <div class="pricecard glass reveal">
+            <h3>Guest List</h3>
+            <p class="muted">Entry + wristband. Great for quick nights out.</p>
+            <div class="pricecard__big">฿ <span class="priceValue" data-base="390">390</span></div>
+            <ul class="list">
+              <li>Standard entry</li>
+              <li>1 welcome shot</li>
+              <li>Queue priority</li>
+            </ul>
+            <button class="btn btn--ghost w-full" data-open-booking type="button">Get Access</button>
+          </div>
+
+          <div class="pricecard pricecard--featured reveal">
+            <div class="ribbon">Most Popular</div>
+            <div class="glass">
+              <h3>VIP Table</h3>
+              <p class="muted">Reserved seating, bottle service, and host support.</p>
+
+              <div class="pricecard__big">฿ <span class="priceValue" data-base="2990">2990</span></div>
+
+              <div class="stepper" aria-label="Guest count selector">
+                <button class="stepper__btn" data-step="-1" type="button" aria-label="Decrease guests">−</button>
+                <div class="stepper__mid">
+                  <div class="stepper__label muted">Guests</div>
+                  <div class="stepper__value" id="guestCount">4</div>
+                </div>
+                <button class="stepper__btn" data-step="1" type="button" aria-label="Increase guests">+</button>
+              </div>
+
+              <div class="total muted">Estimated total: <strong id="vipTotal">฿ 2,990</strong></div>
+
+              <ul class="list">
+                <li>Reserved table</li>
+                <li>VIP host support</li>
+                <li>Priority entrance</li>
+                <li>1 premium bottle</li>
+              </ul>
+
+              <button class="btn btn--primary w-full" data-open-booking type="button">Reserve VIP →</button>
+            </div>
+          </div>
+
+          <div class="pricecard glass reveal">
+            <h3>Private Villa Night</h3>
+            <p class="muted">Full villa booking — perfect for celebrations.</p>
+            <div class="pricecard__big">฿ <span class="priceValue" data-base="14900">14900</span></div>
+            <ul class="list">
+              <li>Private venue</li>
+              <li>Security &amp; staff</li>
+              <li>Custom playlist/DJ</li>
+              <li>Concierge setup</li>
+            </ul>
+            <button class="btn btn--ghost w-full" data-open-booking type="button">Request Quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (content from your original index) -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">Quick form + WhatsApp/Line placeholders (edit as needed).</p>
+          </div>
+        </div>
+
+        <div class="grid contact">
+          <form class="form glass reveal" id="contactForm">
+            <div class="form__row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" placeholder="+66 ..." required />
+              </label>
+            </div>
+
+            <label>
+              <span>What are you looking for?</span>
+              <select name="intent" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Event tickets</option>
+                <option>VIP table</option>
+                <option>Private villa booking</option>
+                <option>Partnership / venue</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="Tell us the date, guests, and vibe..." required></textarea>
+            </label>
+
+            <button class="btn btn--primary" type="submit">
+              Send Message <span aria-hidden="true">→</span>
+            </button>
+
+            <p class="form__note muted" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact__side reveal">
+            <div class="glass panel">
+              <h3>Bookings</h3>
+              <p class="muted">Fast response for VIP tables &amp; villa nights.</p>
+
+              <div class="kv">
+                <div class="kv__k">WhatsApp</div><div class="kv__v">+66 XXX XXX XXXX</div>
+                <div class="kv__k">Line</div><div class="kv__v">@ankaevents</div>
+                <div class="kv__k">Email</div><div class="kv__v">bookings@ankaevents.example</div>
+              </div>
+
+              <button class="btn btn--ghost w-full" data-open-booking type="button">Open Booking Modal</button>
+            </div>
+
+            <div class="glass panel">
+              <h3>Location</h3>
+              <p class="muted">Phuket, Thailand — rooftop, beach club, and private villas.</p>
+              <div class="mapfake" aria-label="Map placeholder">
+                <div class="mapfake__pin" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (from your original index) -->
+  <footer class="ankaFooter" id="siteFooter">
+    <!-- subtle moving strip inside footer -->
+    <div class="ankaFooter__ticker" aria-label="ANKA ticker">
+      <div class="ankaFooter__tickerTrack">
+        <span>ANKA EVENTS</span><span>•</span><span>CURATED ENERGY</span><span>•</span>
+        <span>ROOFTOP</span><span>•</span><span>VILLA</span><span>•</span>
+        <span>WAREHOUSE</span><span>•</span><span>VIP TABLES</span><span>•</span>
+        <span>ANKA EVENTS</span><span>•</span><span>CURATED ENERGY</span><span>•</span>
+        <span>ROOFTOP</span><span>•</span><span>VILLA</span><span>•</span>
+        <span>WAREHOUSE</span><span>•</span><span>VIP TABLES</span><span>•</span>
+      </div>
+    </div>
+
+    <div class="ankaFooter__glow" aria-hidden="true"></div>
+
+    <div class="container ankaFooter__grid">
+      <!-- LEFT: Brand + short pitch + badges -->
+      <div class="ankaFooter__col">
+        <a class="ankaFooter__brand" href="index.html" aria-label="ANKA Events home">
+          <span class="ankaFooter__mark" aria-hidden="true">𐦂</span>
+          <span class="ankaFooter__name">ANKA<span class="ankaFooter__accent">EVENTS</span></span>
+        </a>
+
+        <p class="ankaFooter__desc">
+          Premium nightlife experiences in Phuket — designed with atmosphere, rhythm and precision.
+          Rooftop sessions, private villas, and underground energy.
+        </p>
+
+        <div class="ankaFooter__badges" aria-label="Brand badges">
+          <span class="ankaBadge">Since 2024</span>
+          <span class="ankaBadge">Phuket</span>
+          <span class="ankaBadge">Exclusive</span>
+        </div>
+
+        <div class="ankaFooter__ctaRow">
+          <a class="ankaFooter__link ankaFooter__link--primary" href="#events">Explore Events →</a>
+          <button class="ankaFooter__link" data-open-booking type="button">VIP Booking</button>
+        </div>
+      </div>
+
+      <!-- MID: Links -->
+      <div class="ankaFooter__col">
+        <div class="ankaFooter__title">Navigate</div>
+        <div class="ankaFooter__links">
+          <a href="#events">Events</a>
+          <a href="#venues">Venues</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#tickets">Tickets</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Newsletter -->
+      <div class="ankaFooter__col">
+        <div class="ankaFooter__title">Get updates</div>
+        <p class="muted">Drop your email for new event drops (demo only).</p>
+
+        <div class="ankaFooter__news">
+          <input id="ankaNews" type="email" autocomplete="email" placeholder="Email address" />
+          <button class="btn btn--primary" id="ankaNewsBtn" type="button">Notify me</button>
+        </div>
+        <div class="muted ankaFooter__note" id="ankaNewsNote" role="status" aria-live="polite"></div>
+
+        <div class="ankaFooter__meta muted">
+          © <span id="year"></span> ANKA EVENTS. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top (required by main.js in your newer layout) -->
+  <button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <!-- Event Modal (required by your newer layout) -->
+  <div class="modal" id="eventModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Event details">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel glass">
+      <div class="modal__head">
+        <div>
+          <div class="badge" id="modalDay">Fri</div>
+          <h3 id="modalTitle">Event Title</h3>
+          <p class="muted" id="modalMeta">Venue • Time</p>
+        </div>
+        <button class="iconbtn iconbtn--circle" data-close-modal type="button" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal__poster" id="modalPoster" aria-hidden="true"></div>
+      <p class="modal__desc" id="modalDesc">Description here.</p>
+
+      <div class="modal__row">
+        <div class="chips" id="modalChips"></div>
+        <div class="modal__price" id="modalPrice">฿ 0</div>
+      </div>
+
+      <div class="modal__actions">
+        <button class="btn btn--primary" data-open-booking type="button">Book Now →</button>
+        <button class="btn btn--ghost" data-close-modal type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Modal (required) -->
+  <div class="modal" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Booking form">
+    <div class="modal__backdrop" data-close-booking></div>
+    <div class="modal__panel glass">
+      <div class="modal__head">
+        <div>
+          <div class="badge badge--alt">VIP</div>
+          <h3>Booking Request</h3>
+          <p class="muted">Demo only — connect to EmailJS/Formspree later.</p>
+        </div>
+        <button class="iconbtn iconbtn--circle" data-close-booking type="button" aria-label="Close">×</button>
+      </div>
+
+      <!-- IMPORTANT: main.js expects #bookingForm + #bookingNote -->
+      <form class="form" id="bookingForm">
+        <div class="form__row">
+          <label>
+            <span>Date</span>
+            <input type="date" name="date" required />
+          </label>
+          <label>
+            <span>Guests</span>
+            <input type="number" name="guests" min="1" value="4" required />
+          </label>
+        </div>
+
+        <label>
+          <span>Type</span>
+          <select name="type" required>
+            <option>Guest list</option>
+            <option>VIP table</option>
+            <option>Private villa</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Notes</span>
+          <textarea name="notes" rows="3" placeholder="Preferred venue, music style, special requests..."></textarea>
+        </label>
+
+        <button class="btn btn--primary w-full" type="submit">Submit Request →</button>
+        <p class="form__note muted" id="bookingNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox (required) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery preview">
+    <div class="lightbox__backdrop" data-close-lightbox></div>
+    <div class="lightbox__panel glass">
+      <button class="iconbtn iconbtn--circle lightbox__close" data-close-lightbox type="button" aria-label="Close">×</button>
+      <div class="lightbox__img" id="lightboxImg" aria-label="Selected image"></div>
+      <div class="lightbox__caption muted" id="lightboxCaption">Image</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  ANKA<span class="brand__accent">EVENTS</span>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Background ambience -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <!-- Top progress bar -->
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="Noir Nights Home">
+        <span class="brand__mark" aria-hidden="true">◼︎</span>
+        <span class="brand__text">ANKA<span class="brand__accent">EVENTS</span></span>
+      </a>
+
+      <nav class="nav__links" data-nav>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="index.html#tickets">Tickets</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="iconbtn" id="soundBtn" type="button" aria-pressed="false" title="Pulse mode">
+          <span class="iconbtn__dot"></span>
+          <span class="iconbtn__text">Pulse</span>
+        </button>
+
+        <!-- Keep consistent with Events -->
+        <button class="btn btn--primary" data-open-booking type="button">
+          Book a Table <span aria-hidden="true">→</span>
+        </button>
+
+        <!-- IMPORTANT: burger exists so main.js doesn't crash -->
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- IMPORTANT: mobile menu exists so main.js doesn't crash -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="container mobile__inner">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="index.html#tickets">Tickets</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="btn btn--primary w-full" data-open-booking type="button">
+          Book a Table →
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <!-- About hero -->
+        <div class="aboutHero glass reveal">
+          <div class="pill">
+            <span class="pill__dot"></span>
+            <span>MANIFESTO • INDUSTRIAL AESTHETIC • CURATED NIGHTS</span>
+          </div>
+
+          <h2 class="aboutHero__title">We don’t “throw parties”. We design pressure.</h2>
+
+          <p class="muted aboutHero__desc">
+            NOIR NIGHTS is a premium nightlife concept built around atmosphere engineering:
+            sound-first rooms, controlled capacity, and clean booking UX. This site is also a
+            strong portfolio piece — modern UI, micro-interactions, and real-world event flows.
+          </p>
+
+          <div class="aboutHero__grid">
+            <div class="stat2">
+              <div class="stat2__n" data-count="48">0</div>
+              <div class="muted">Events / month</div>
+            </div>
+            <div class="stat2">
+              <div class="stat2__n" data-count="12">0</div>
+              <div class="muted">Partner venues</div>
+            </div>
+            <div class="stat2">
+              <div class="stat2__n" data-count="3200">0</div>
+              <div class="muted">Guests hosted</div>
+            </div>
+            <div class="stat2">
+              <div class="stat2__n" data-count="97">0</div>
+              <div class="muted">Satisfaction (%)</div>
+            </div>
+          </div>
+
+          <div class="hero__cta" style="margin-top:14px;">
+            <a class="btn btn--primary" href="events.html">See Events →</a>
+            <button class="btn btn--ghost" id="randomFactBtn" type="button">Random Fact</button>
+          </div>
+
+          <p class="muted" id="randomFact" style="margin-top:12px;"></p>
+        </div>
+
+        <!-- Capabilities -->
+        <div class="section__head reveal" style="margin-top:22px;">
+          <div>
+            <h2>What this site can do</h2>
+            <p class="muted">Client-ready structure + portfolio impact. No CMS required.</p>
+          </div>
+        </div>
+
+        <div class="grid venues">
+          <div class="venue glass reveal">
+            <div class="venue__icon" aria-hidden="true">⌁</div>
+            <h3>Interactive Mood</h3>
+            <p class="muted">Pulse mode, glow + subtle strobe (optional), premium micro-interactions.</p>
+          </div>
+          <div class="venue glass reveal">
+            <div class="venue__icon" aria-hidden="true">◌</div>
+            <h3>Event UX</h3>
+            <p class="muted">Filters, search, event details, quick booking flow.</p>
+          </div>
+          <div class="venue glass reveal">
+            <div class="venue__icon" aria-hidden="true">∿</div>
+            <h3>Fast Publishing</h3>
+            <p class="muted">Swap images, edit text, publish instantly — ideal for Phuket villa events.</p>
+          </div>
+        </div>
+
+        <!-- FAQ + Feedback -->
+        <div class="grid aboutGrid" style="margin-top:18px;">
+          <div class="glass panel reveal">
+            <h3>FAQ</h3>
+            <div class="accordion" id="faq">
+              <button class="acc" type="button">
+                <span>Can we connect this to real booking email?</span><span class="acc__icon">+</span>
+              </button>
+              <div class="acc__panel">
+                <p class="muted">Yes — EmailJS/Formspree can send email without backend. Later we can add it quickly.</p>
+              </div>
+
+              <button class="acc" type="button">
+                <span>Can events be dynamic from a JSON file?</span><span class="acc__icon">+</span>
+              </button>
+              <div class="acc__panel">
+                <p class="muted">Yes — we can render events from JSON and avoid editing HTML each time.</p>
+              </div>
+
+              <button class="acc" type="button">
+                <span>Can it look more “techno / underground”?</span><span class="acc__icon">+</span>
+              </button>
+              <div class="acc__panel">
+                <p class="muted">Yes — tweak accent colors, reduce rounding, add harsher typography and more contrast.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass panel reveal">
+            <h3>Feedback</h3>
+            <p class="muted">A small slider makes it feel like a real brand.</p>
+
+            <div class="quotes" id="quotes">
+              <div class="quote is-active">
+                <div class="quote__t">“Clean, premium, and fast — bookings feel effortless.”</div>
+                <div class="muted">Venue manager</div>
+              </div>
+              <div class="quote">
+                <div class="quote__t">“The Pulse mode is a genius touch. Feels alive.”</div>
+                <div class="muted">Guest list coordinator</div>
+              </div>
+              <div class="quote">
+                <div class="quote__t">“This looks like an agency site, not a template.”</div>
+                <div class="muted">Client</div>
+              </div>
+            </div>
+
+            <div class="quoteNav">
+              <button class="btn btn--ghost" id="qPrev" type="button">← Prev</button>
+              <button class="btn btn--ghost" id="qNext" type="button">Next →</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer (IMPORTANT: #year exists so main.js doesn't crash) -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="muted">© <span id="year"></span> NOIR NIGHTS. All rights reserved.</div>
+        <div class="footer__links">
+          <a href="#top">Back to top</a>
+          <a href="events.html">Events</a>
+          <a href="index.html#tickets">Tickets</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to top (IMPORTANT: exists so main.js doesn't crash) -->
+  <button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <!-- Booking modal (used by About button) -->
+  <div class="modal" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" data-close-booking></div>
+    <div class="modal__panel glass">
+      <div class="modal__head">
+        <div>
+          <div class="badge badge--alt">VIP</div>
+          <h3>Booking Request</h3>
+          <p class="muted">Demo modal — connect to EmailJS/Formspree later.</p>
+        </div>
+        <button class="iconbtn iconbtn--circle" data-close-booking type="button" aria-label="Close">×</button>
+      </div>
+      <button class="btn btn--primary w-full" data-close-booking type="button">Close</button>
+    </div>
+  </div>
+
+  <!-- IMPORTANT: placeholders so main.js doesn't crash on About -->
+  <div class="modal" id="eventModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel glass">
+      <div class="modal__head">
+        <div>
+          <div class="badge" id="modalDay">Fri</div>
+          <h3 id="modalTitle">Event Title</h3>
+          <p class="muted" id="modalMeta">Venue • Time</p>
+        </div>
+        <button class="iconbtn iconbtn--circle" data-close-modal type="button" aria-label="Close">×</button>
+      </div>
+      <div class="modal__poster" id="modalPoster" aria-hidden="true"></div>
+      <p class="modal__desc" id="modalDesc">Description here.</p>
+      <div class="modal__row">
+        <div class="chips" id="modalChips"></div>
+        <div class="modal__price" id="modalPrice">฿ 0</div>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--ghost" data-close-modal type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox__backdrop" data-close-lightbox></div>
+    <div class="lightbox__panel glass">
+      <button class="iconbtn iconbtn--circle lightbox__close" data-close-lightbox type="button" aria-label="Close">×</button>
+      <div class="lightbox__img" id="lightboxImg" aria-label="Selected image"></div>
+      <div class="lightbox__caption muted" id="lightboxCaption">Image</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

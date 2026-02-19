@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NOIR NIGHTS — Event</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg"><div class="bg__grid"></div><div class="bg__glow bg__glow--a"></div><div class="bg__glow bg__glow--b"></div><div class="bg__noise"></div></div>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html"><span class="brand__mark">◼︎</span><span class="brand__text">NOIR<span class="brand__accent">NIGHTS</span></span></a>
+      <nav class="nav__links" data-nav>
+  <a href="index.html">Home</a>
+  <a href="events.html">Events</a>
+  <a href="about.html">About</a>
+  <a href="index.html#tickets">Tickets</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+      <div class="nav__actions">
+        <button class="btn btn--primary" data-open-booking type="button">Book Now →</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="min-height: 62vh;">
+      <div class="heroVideo" aria-hidden="true">
+        <video class="heroVideo__media" autoplay muted loop playsinline preload="metadata">
+          <source src="video/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="heroVideo__overlay"></div>
+      </div>
+
+      <div class="container hero__inner" style="padding-top: 56px;">
+        <div class="hero__copy reveal">
+          <div class="pill"><span class="pill__dot"></span><span id="evMetaTop">Venue • Time</span></div>
+          <h1 id="evTitle">Event Title</h1>
+          <p class="lead" id="evDesc">Event description…</p>
+
+          <div class="hero__cta">
+            <button class="btn btn--primary" data-open-booking type="button">Reserve VIP →</button>
+            <a class="btn btn--ghost" href="events.html">Back to Events</a>
+          </div>
+
+          <div class="chips" id="evChips" style="margin-top:14px;"></div>
+        </div>
+
+        <div class="hero__card reveal">
+          <div class="card glass">
+            <div class="card__top">
+              <div class="card__title">
+                <span class="badge" id="evDay">Day</span>
+                <h3>Ticket</h3>
+                <p class="muted">Instant access / guest list</p>
+              </div>
+            </div>
+            <div class="card__poster" aria-hidden="true"></div>
+            <div class="card__bottom">
+              <div class="event__foot">
+                <span class="price" id="evPrice">฿ 0</span>
+                <span class="muted">Limited capacity</span>
+              </div>
+              <div class="card__actions" style="margin-top:12px;">
+                <button class="btn btn--primary w-full" data-open-booking type="button">Book →</button>
+                <a class="btn btn--ghost w-full" href="events.html">Browse more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <h2>Details</h2>
+            <p class="muted">Make this client-ready by swapping text, times, venues.</p>
+          </div>
+        </div>
+
+        <div class="grid venues">
+          <div class="venue glass reveal">
+            <div class="venue__icon">⌁</div>
+            <h3>Entry</h3>
+            <p class="muted">Bring ID • Dress code • Ticket QR.</p>
+          </div>
+          <div class="venue glass reveal">
+            <div class="venue__icon">◌</div>
+            <h3>Music</h3>
+            <p class="muted">Curated lineup • peak-time set • premium system.</p>
+          </div>
+          <div class="venue glass reveal">
+            <div class="venue__icon">∿</div>
+            <h3>VIP</h3>
+            <p class="muted">Reserved tables • bottle service • host support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Booking modal -->
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-booking></div>
+    <div class="modal__panel glass">
+      <div class="modal__head">
+        <div><div class="badge badge--alt">VIP</div><h3>Booking Request</h3><p class="muted">Demo modal.</p></div>
+        <button class="iconbtn iconbtn--circle" data-close-booking type="button">×</button>
+      </div>
+      <button class="btn btn--primary w-full" data-close-booking type="button">Close</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+/* ====================================================================
+    ANKA DESIGN SYSTEM | VARIABLES & TOKENS
+    Version: 2.0 (Production)
+    Author: Anka Digital
+====================================================================
+*/
+
+:root {
+    /* -----------------------------------------------------------
+       1. COLOR PALETTE (NOIR SYSTEM)
+       ----------------------------------------------------------- */
+    
+    /* Backgrounds: Deep, layered blacks for depth */
+    --bg-0: #050505;       /* Void Black */
+    --bg-1: #0A0A0A;       /* Deep Charcoal */
+    --bg-2: #141414;       /* Soft Black */
+    --bg-3: #1F1F1F;       /* Surface Black */
+    --bg-overlay: rgba(5, 5, 5, 0.92); /* Glassmorphism Base */
+
+    /* Typography Colors */
+    --text-primary: #EDEDED;    /* Off-white for readability */
+    --text-secondary: #A1A1AA;  /* Cool grey */
+    --text-muted: #52525B;      /* Deep grey for subtitles */
+    --text-inverse: #050505;    /* For buttons */
+
+    /* Accents: Champagne Gold */
+    --accent-primary: #D4AF37;
+    --accent-hover: #F2C94C;
+    --accent-dim: rgba(212, 175, 55, 0.1);
+    --accent-glow: rgba(212, 175, 55, 0.4);
+
+    /* Borders & Lines */
+    --border-subtle: rgba(255, 255, 255, 0.05);
+    --border-strong: rgba(255, 255, 255, 0.12);
+    --border-accent: rgba(212, 175, 55, 0.3);
+
+    /* Status Colors */
+    --error: #CF6679;
+    --success: #03DAC6;
+
+    /* -----------------------------------------------------------
+       2. TYPOGRAPHY SCALE (FLUID)
+       ----------------------------------------------------------- */
+    
+    --font-main: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Clamp: (Minimum, Viewport Scaler, Maximum) */
+    --display-1: clamp(3.5rem, 10vw, 6rem);
+    --h1: clamp(2.5rem, 6vw, 4rem);
+    --h2: clamp(2rem, 5vw, 3rem);
+    --h3: clamp(1.5rem, 3vw, 2rem);
+    --h4: clamp(1.2rem, 2vw, 1.5rem);
+    --body-lg: 1.125rem;
+    --body-base: 1rem;
+    --body-sm: 0.875rem;
+    --label: 0.75rem;
+
+    /* Line Heights */
+    --lh-tight: 1.1;
+    --lh-base: 1.6;
+    --lh-loose: 1.8;
+
+    /* Letter Spacing */
+    --tracking-tight: -0.04em;
+    --tracking-base: 0em;
+    --tracking-wide: 0.15em;
+
+    /* -----------------------------------------------------------
+       3. SPACING SYSTEM (8pt Grid)
+       ----------------------------------------------------------- */
+    
+    --space-1: 0.25rem;  /* 4px */
+    --space-2: 0.5rem;   /* 8px */
+    --space-3: 0.75rem;  /* 12px */
+    --space-4: 1rem;     /* 16px */
+    --space-6: 1.5rem;   /* 24px */
+    --space-8: 2rem;     /* 32px */
+    --space-12: 3rem;    /* 48px */
+    --space-16: 4rem;    /* 64px */
+    --space-24: 6rem;    /* 96px */
+    --space-32: 8rem;    /* 128px */
+    --space-64: 16rem;   /* 256px */
+
+    /* Container Widths */
+    --container-sm: 640px;
+    --container-md: 960px;
+    --container-lg: 1280px;
+    --container-xl: 1600px;
+
+    /* -----------------------------------------------------------
+       4. ANIMATION PHYSICS
+       ----------------------------------------------------------- */
+    
+    --anka-ease: cubic-bezier(0.2, 1, 0.3, 1); /* Signature "Heavy" Ease */
+    --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    
+    --duration-fast: 300ms;
+    --duration-base: 600ms;
+    --duration-slow: 1200ms;
+
+    /* -----------------------------------------------------------
+       5. LAYOUT & Z-INDEX
+       ----------------------------------------------------------- */
+    
+    --header-height: 80px;
+    
+    --z-negative: -1;
+    --z-base: 1;
+    --z-sticky: 100;
+    --z-overlay: 500;
+    --z-modal: 1000;
+    --z-cursor: 9999;
+
+    /* -----------------------------------------------------------
+       6. UI RADIUS
+       ----------------------------------------------------------- */
+    
+    --r-sm: 2px;
+    --r-md: 4px;
+    --r-lg: 8px;
+    --r-full: 9999px;
+}
+
+/* Dark Mode Preference Query 
+   (System is dark by default, but this future-proofs overrides)
+*/
+@media (prefers-color-scheme: light) {
+    /* ANKA is strictly Noir. 
+    We do not support light mode to maintain brand integrity.
+    This block is intentionally left blank or can be used 
+    to invert colors if accessibility law requires it.
+    */
+}

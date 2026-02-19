@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Anka | Architectural Web Design Studio. We build digital monuments.">
+    
+    <title>ANKA | Digital Architecture Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    
+    <div class="noise-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="menu-overlay">
+        <button id="menuClose" style="position: absolute; top: 30px; right: 40px; background:none; border:none; color:white; cursor:pointer;">
+            CLOSE [X]
+        </button>
+        <nav class="editorial-nav">
+            <a href="#hero" class="nav-link"><span>01</span> Home</a>
+            <a href="#work" class="nav-link"><span>02</span> Portfolio</a>
+            <a href="#process" class="nav-link"><span>03</span> Methodology</a>
+            <a href="#pricing" class="nav-link"><span>04</span> Investment</a>
+            <a href="#contact" class="nav-link"><span>05</span> Inquiry</a>
+        </nav>
+    </div>
+
+    <header class="nav-container items-center flex justify-between" style="position: fixed; top: 0; width: 100%; padding: 0 var(--space-6); z-index: var(--z-sticky);">
+        <div class="nav-logo">ANKA</div>
+        <button id="menuToggle" class="menu-trigger">
+            Menu
+        </button>
+    </header>
+
+    <main>
+        <section id="hero" class="hero container">
+            <div class="hero-content reveal-init">
+                <span class="text-accent uppercase mb-4" style="display:block; font-weight:700;">Est. 2024</span>
+                <h1 class="h1 mb-8">
+                    We construct digital<br>
+                    <span class="text-muted">monuments for the</span><br>
+                    visionary few.
+                </h1>
+                <p class="mb-12" style="font-size: 1.25rem; color: var(--text-secondary);">
+                    Anka is a boutique digital architecture firm. We reject the template
+                    economy in favor of bespoke, high-performance web systems.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#work" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-outline" style="margin-left: 20px;">Start Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section-padding container">
+            <div class="flex justify-between items-center mb-12 reveal-init">
+                <div>
+                    <span class="text-accent uppercase mb-4" style="display:block;">Selected Works</span>
+                    <h2 class="h2">The Archive</h2>
+                </div>
+                <a href="#" class="btn btn-outline">All Projects</a>
+            </div>
+
+            <div class="grid portfolio-grid">
+                <div class="portfolio-card featured reveal-init">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop" alt="Obsidian Architecture">
+                    </div>
+                    <div class="card-meta">
+                        <div>
+                            <h3 class="h3">The Obsidian Monolith</h3>
+                            <span class="text-muted">Real Estate / WebGL</span>
+                        </div>
+                        <span class="text-accent">2024</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal-init">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop" alt="Lumina Systems">
+                    </div>
+                    <div class="card-meta">
+                        <div>
+                            <h3 class="h4">Lumina Systems</h3>
+                            <span class="text-muted">SaaS / Dashboard</span>
+                        </div>
+                        <span class="text-white">→</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal-init">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop" alt="Aether Labs">
+                    </div>
+                    <div class="card-meta">
+                        <div>
+                            <h3 class="h4">Aether Labs</h3>
+                            <span class="text-muted">BioTech / Branding</span>
+                        </div>
+                        <span class="text-white">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section-padding container">
+            <div class="grid" style="grid-template-columns: 1fr 2fr; gap: var(--space-12);">
+                <div class="reveal-init" style="position: sticky; top: 100px; height: fit-content;">
+                    <span class="text-accent uppercase mb-4" style="display:block;">Methodology</span>
+                    <h2 class="h2">From Blueprint<br>to Launch</h2>
+                    <p class="mt-12 text-muted">
+                        We don't guess. We architect. Our process is a rigid framework designed to produce fluid results.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal-init">
+                        <div class="timeline-marker"></div>
+                        <span class="text-accent uppercase" style="font-size: 0.75rem;">Phase 01</span>
+                        <h3 class="h3 mb-4">Discovery & Blueprinting</h3>
+                        <p>Before a pixel is placed, we dissect your market position. We build a structural sitemap and user-flow architecture focused purely on conversion physics.</p>
+                    </div>
+
+                    <div class="timeline-item reveal-init">
+                        <div class="timeline-marker"></div>
+                        <span class="text-accent uppercase" style="font-size: 0.75rem;">Phase 02</span>
+                        <h3 class="h3 mb-4">Visual Monument Creation</h3>
+                        <p>We apply the "Architectural Noir" aesthetic. High contrast, typographic precision, and intentional whitespace. This is where brand value is generated.</p>
+                    </div>
+
+                    <div class="timeline-item reveal-init">
+                        <div class="timeline-marker"></div>
+                        <span class="text-accent uppercase" style="font-size: 0.75rem;">Phase 03</span>
+                        <h3 class="h3 mb-4">Performance Engineering</h3>
+                        <p>We develop using vanilla technologies for maximum speed. No bloatware. Just clean, semantic code that Google loves and users feel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section-padding" style="background: var(--bg-1); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+            <div class="container">
+                <div class="mb-12 text-center reveal-init">
+                    <span class="text-accent uppercase">Investment</span>
+                    <h2 class="h2">Transparent Tiers</h2>
+                </div>
+
+                <div class="pricing-wrapper">
+                    <div class="pricing-card reveal-init delay-100">
+                        <h3 class="h4 text-muted">Foundation</h3>
+                        <div class="h2 mt-12 mb-8">$5,000</div>
+                        <p class="text-muted mb-8">Perfect for emerging brands requiring a solid digital footprint.</p>
+                        <ul class="price-list mb-12">
+                            <li>Bespoke 5-Page Site</li>
+                            <li>CMS Integration</li>
+                            <li>Basic SEO Setup</li>
+                            <li>2 Weeks Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%;">Select Tier</a>
+                    </div>
+
+                    <div class="pricing-card premium reveal-init delay-200">
+                        <span class="uppercase text-accent" style="font-size: 0.75rem; letter-spacing: 0.1em; display:block; margin-bottom: 10px;">Most Requested</span>
+                        <h3 class="h4 text-white">Signature Build</h3>
+                        <div class="h2 mt-12 mb-8">$12,000</div>
+                        <p class="text-muted mb-8">For organizations ready to dominate their market sector.</p>
+                        <ul class="price-list mb-12">
+                            <li>Full Brand Monument</li>
+                            <li>Advanced Motion (WebGL)</li>
+                            <li>Technical SEO Audit</li>
+                            <li>Copywriting Assistance</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%;">Select Tier</a>
+                    </div>
+
+                    <div class="pricing-card reveal-init delay-300">
+                        <h3 class="h4 text-muted">Enterprise</h3>
+                        <div class="h2 mt-12 mb-8">Custom</div>
+                        <p class="text-muted mb-8">Complex systems, apps, and large-scale migrations.</p>
+                        <ul class="price-list mb-12">
+                            <li>Custom Web Applications</li>
+                            <li>Database Architecture</li>
+                            <li>Internationalization</li>
+                            <li>Retainer Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%;">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding container">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-16);">
+                <div class="reveal-init">
+                    <span class="text-accent uppercase mb-4" style="display:block;">Contact</span>
+                    <h2 class="h1 mb-8">Let's build your<br>monument.</h2>
+                    <p class="text-muted mb-12">
+                        We accept a limited number of clients per quarter to ensure total dedication.
+                    </p>
+                    <div>
+                        <a href="mailto:hello@anka.studio" class="h3 text-white" style="border-bottom: 1px solid var(--accent-primary);">hello@anka.studio</a>
+                    </div>
+                </div>
+
+                <form class="reveal-init delay-200">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name" required>
+                        <label for="name" class="form-label">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="email" required>
+                        <label for="email" class="form-label">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="project" required>
+                        <label for="project" class="form-label">Project Type</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="budget">
+                        <label for="budget" class="form-label">Estimated Budget</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-12">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-grid">
+            <div class="reveal-init">
+                <span class="nav-logo">ANKA</span>
+                <p class="text-muted mt-12">
+                    Architectural Digital Design.<br>
+                    Based in The Void.
+                </p>
+            </div>
+            
+            <div class="reveal-init delay-100">
+                <span class="text-white uppercase mb-4" style="display:block; font-weight:700;">Sitemap</span>
+                <a href="#hero" class="footer-link">Home</a>
+                <a href="#work" class="footer-link">Work</a>
+                <a href="#process" class="footer-link">Process</a>
+            </div>
+
+            <div class="reveal-init delay-200">
+                <span class="text-white uppercase mb-4" style="display:block; font-weight:700;">Social</span>
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Twitter / X</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+            </div>
+
+            <div class="reveal-init delay-300">
+                <span class="text-white uppercase mb-4" style="display:block; font-weight:700;">Legal</span>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+        </div>
+        <div class="mt-12 text-muted" style="font-size: 0.75rem; text-align: center;">
+            &copy; <span id="currentYear"></span> Anka Design Studio. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
