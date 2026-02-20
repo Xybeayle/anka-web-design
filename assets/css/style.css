@@ -2556,3 +2556,336 @@ a:hover { color: var(--accent); }
     display: none;
   }
 }
+
+
+/* ========== MOBILE STYLES (max-width: 768px) ========== */
+@media (max-width: 768px) {
+
+  /* --------------------------------------------
+     1. HIDE SPECIFIC SECTIONS ON MOBILE
+        (approach bubbles, services section)
+  -------------------------------------------- */
+  .approach-metaphor,           /* the floating bubbles */
+  .services-preview,            /* "what we do" cards on homepage */
+  .services-showcase {          /* services section on services page */
+    display: none !important;
+  }
+
+  /* --------------------------------------------
+     2. HIDE DECORATIVE / NON-ESSENTIAL ELEMENTS
+  -------------------------------------------- */
+  .rotating-tags,              /* rotating hero tags */
+  .blob,                       /* hero blobs */
+  .grid-overlay,               /* hero grid overlay */
+  .cta-visual,                 /* right column in CTA */
+  .story-decoration,           /* decorative shapes in about story */
+  .included-blob,              /* background blobs in deliverables */
+  .philosophy-decoration,      /* small decorative shape in philosophy */
+  .circle-glow,                /* glow behind metaphor circles */
+  .cursor-glow {               /* mouse follower (not needed on touch) */
+    display: none !important;
+  }
+
+  /* --------------------------------------------
+     3. CONTAINER & SPACING – TIGHTER
+  -------------------------------------------- */
+  .container {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  section {
+    padding: 2rem 0;           /* reduced from 3rem */
+  }
+
+  /* Remove extra gap after hero */
+  .hero {
+    padding: 2rem 0 1rem;      /* less bottom padding */
+  }
+
+  /* Adjust marquee strip margin */
+  .marquee-strip {
+    margin-bottom: 1.5rem;     /* reduced from 3rem */
+  }
+
+  /* --------------------------------------------
+     4. STACK ALL GRIDS TO SINGLE COLUMN
+  -------------------------------------------- */
+  .hero-grid,
+  .card-grid,
+  .interactive-card-grid,
+  .principles-grid,
+  .philosophy-grid,
+  .work-grid-enhanced,
+  .demo-grid,
+  .pricing-grid-enhanced,
+  .testimonial-grid,
+  .contact-grid,
+  .footer-grid,
+  .expertise-grid,
+  .team-grid,
+  .benefits-grid,
+  .tech-grid-pro,
+  .approach .card-grid {        /* if you have an approach section */
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;                /* smaller gap */
+  }
+
+  /* --------------------------------------------
+     5. PRICING SECTION – FIT SCREEN
+  -------------------------------------------- */
+  .pricing-card {
+    padding: 1rem;            /* less padding */
+  }
+
+  .pricing-card.popular {
+    transform: scale(1);         /* remove scale on mobile */
+    margin: 0;                   /* remove any extra margin */
+  }
+
+  .popular-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 1rem;
+    top: -0.5rem;                /* adjust position */
+  }
+
+  .price {
+    font-size: 2rem;             /* smaller price */
+  }
+
+  .feature-list li {
+    padding: 0.2rem 0;
+    font-size: 0.90rem;
+  }
+
+  .pricing-card .btn {
+    width: 100%;                  /* full-width button */
+    margin-top: 0.8rem;
+    text-align: center;
+  }
+
+  /* --------------------------------------------
+     6. ADJUST FONT SIZES
+  -------------------------------------------- */
+  .display {
+    font-size: 2.2rem;           /* slightly smaller */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  .page-title-advanced {
+    font-size: 2.5rem;
+  }
+
+  .page-sub-advanced {
+    font-size: 1.1rem;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+
+  /* --------------------------------------------
+     7. RESPONSIVE IMAGES & IFRAMES
+  -------------------------------------------- */
+  img,
+  iframe,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .iframe-container {
+    padding-bottom: 75%;        /* taller aspect ratio for mobile if needed */
+  }
+
+  /* --------------------------------------------
+     8. TOUCH TARGETS (minimum 44x44)
+  -------------------------------------------- */
+  .btn,
+  .btn-small,
+  .btn-large,
+  .nav-list a,
+  .footer-menu a,
+  .card-link,
+  .filter-btn,
+  .accordion-btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.7rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+  }
+
+  /* --------------------------------------------
+     9. NAVIGATION (already present, but ensure)
+  -------------------------------------------- */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 70px;                   /* adjust if header height changes */
+    left: 0;
+    width: 100%;
+    background: var(--bg-dark);
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+
+  .main-nav.open {
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .nav-cta {
+    margin-top: 1rem;
+  }
+
+  /* --------------------------------------------
+     10. TIMELINE ADJUSTMENTS (if present)
+  -------------------------------------------- */
+  .timeline-modern::before {
+    left: 1.5rem;
+  }
+
+  .step-marker {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .step-content {
+    padding: 0.8rem 1rem;
+  }
+
+  .step-content h3 {
+    font-size: 1.2rem;
+  }
+
+  /* --------------------------------------------
+     11. FOOTER
+  -------------------------------------------- */
+  .footer-grid {
+    gap: 1.5rem;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+  }
+
+  .newsletter-form {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  /* --------------------------------------------
+     12. EXTRA SAFETY: NO HORIZONTAL SCROLL
+  -------------------------------------------- */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* ========== EXTRA SMALL SCREENS (max-width: 480px) ========== */
+@media (max-width: 480px) {
+  .display {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .btn,
+  .btn-large {
+    width: 100%;                /* full-width buttons on very small screens */
+    padding: 0.8rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .pricing-card {
+    padding: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
+  }
+}
+/* Remove all possible spacing between hero and marquee */
+/* Force hero bottom spacing to zero */
+.hero,
+.hero .container,
+.hero-grid,
+.hero-content,
+.hero-visual {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove min-height from hero visual on mobile */
+.hero-visual {
+  min-height: 0 !important;
+}
+
+/* Ensure marquee starts flush */
+.marquee-strip {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Hide any pseudo-elements that might add height */
+.moving-bg::before {
+  display: none !important;
+}
+main {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
