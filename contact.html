@@ -1,75 +1,281 @@
-<!-- FILE: contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – ANKA WEB DESIGN</title>
-  <meta name="description" content="Reach out – we’d love to hear about your project.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Reach out – we’d love to hear about your project."/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="site-header"><div class="container header-container"><a href="index.html" class="logo">ANKA</a><button class="mobile-menu-toggle" aria-expanded="false"><span></span><span></span><span></span></button><nav class="main-nav"><ul class="nav-list"><li><a href="services.html">Services</a></li><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul><a href="contact.html" class="btn btn-primary nav-cta">Book a Call</a></nav></div></header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <main id="main-content">
-    <section class="page-header">
-      <div class="container"><h1 class="page-title">start a conversation</h1><p class="page-sub">Tell us about your brand – we’ll get back within 24h.</p></div>
-    </section>
+  <header class="site-header">
+    <div class="container header-container">
+      <a class="logo" href="index.html" aria-label="ANKA home">
+        <img class="logo-image" src="assets/img/anka-logo.png" alt=""/>
+        <span class="logo-text">ANKA WEB DESIGN</span>
+      </a>
 
-    <div class="contact-grid container">
-      <div class="contact-form">
-        <form id="demoContactForm">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <button type="submit" class="btn btn-primary">Send message</button>
-        </form>
-      </div>
-      <div class="contact-info">
-        <h2>Book a call</h2>
-        <a href="#" class="btn btn-outline btn-large">Schedule (Calendly style)</a>
-        <p class="contact-detail">hello@anka.design<br>+66 123 456 789<br>Phuket / Remote Worldwide</p>
-        <div class="map-placeholder" aria-label="Map showing Phuket, Thailand"></div>
-      </div>
+      <button class="mobile-menu-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Book a Call</a>
+      </nav>
+    </div>
+  </header>
+
+<main id="main-content">
+
+  <section class="contact-hero-beacon">
+    <div class="contact-hero-beacon__bg" aria-hidden="true">
+      <div class="contact-hero-beacon__grid"></div>
+      <div class="contact-hero-beacon__glow"></div>
+      <div class="contact-hero-beacon__grain"></div>
     </div>
 
-    <!-- Why work with us -->
-    <section class="why-us">
-      <div class="container">
-        <h2 class="section-title">why work with us</h2>
-        <div class="benefits-grid">
-          <div class="benefit-card"><h3>⚡ Fast & focused</h3><p>We respect your time – efficient process, clear communication.</p></div>
-          <div class="benefit-card"><h3>🎯 Industry specialists</h3><p>We understand tourism, events, and hospitality deeply.</p></div>
-          <div class="benefit-card"><h3>🤝 Long‑term partners</h3><p>We're here for ongoing support and growth.</p></div>
+    <div class="container">
+      <div class="contact-hero-beacon__layout">
+        
+        <div class="contact-form-card">
+          <div class="contact-form-card__head">
+            <h2 class="contact-form-card__title">Tell Us What You’re Building</h2>
+            <p class="contact-form-card__sub">Fast reply (usually within 24 hours on weekdays).</p>
+          </div>
+
+          <form class="contact-form-v2" id="ankaContactForm" autocomplete="on">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="name" type="text" placeholder="Your name" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="emailAddress">Email</label>
+                <input id="emailAddress" name="email" type="email" placeholder="hello@company.com" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="brandName">Brand / business</label>
+                <input id="brandName" name="brand" type="text" placeholder="Company name (optional)"/>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Project type</label>
+                <select id="projectType" name="projectType">
+                  <option value="tourism">Tourism & Hospitality</option>
+                  <option value="events">Events</option>
+                  <option value="restaurant">Cafe / Bar / Restaurant</option>
+                  <option value="corporate">Corporate / Brand</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Budget range</label>
+                <select id="budget" name="budget">
+                  <option value="">Select…</option>
+                  <option value="starter">$800 – $1,500</option>
+                  <option value="growth">$1,500 – $3,500</option>
+                  <option value="premium">$3,500 – $7,500</option>
+                  <option value="enterprise">$7,500+</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select…</option>
+                  <option value="asap">ASAP</option>
+                  <option value="2-4">2–4 weeks</option>
+                  <option value="4-8">4–8 weeks</option>
+                  <option value="flex">Flexible</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Goals, pages you need, links you like — anything helpful…" required></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-large" type="submit">Send inquiry</button>
+              <p class="form-note">Prefer email? <a href="mailto:ankawebdesign@gmail.com">ankawebdesign@gmail.com</a></p>
+            </div>
+          </form>
+        </div>
+
+
+
+<section class="section-block surface-1" id="directConnect">
+  <div class="container">
+    <h2 class="section-title">Quick contact paths</h2>
+
+    <div class="contact-grid">
+      <div class="info-block">
+
+        <!-- Email (framed) -->
+        <div class="contact-item" style="border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px; background:rgba(255,255,255,.03);">
+          <span class="accent-icon" aria-hidden="true">✉</span>
+          <div>
+            <strong>Email</strong>
+            <p class="muted"><a href="mailto:ankawebdesign@gmail.com">ankawebdesign@gmail.com</a></p>
+          </div>
+        </div>
+
+        <!-- Phone (framed) -->
+        <div class="contact-item" style="border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px; background:rgba(255,255,255,.03); margin-top:12px;">
+          <span class="accent-icon" aria-hidden="true">☏</span>
+          <div>
+            <strong>Phone</strong>
+            <p class="muted">+66 123 456 789</p>
+          </div>
+        </div>
+
+        <!-- Instagram (framed) -->
+        <div class="contact-item" style="border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px; background:rgba(255,255,255,.03); margin-top:12px;">
+          <span class="accent-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </span>
+          <div>
+            <strong>Instagram</strong>
+            <p class="muted"><a href="#" target="_blank" rel="noopener">instagram.com/ankawebdesign</a></p>
+          </div>
+        </div>
+
+        <!-- Facebook (framed) -->
+        <div class="contact-item" style="border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px; background:rgba(255,255,255,.03); margin-top:12px;">
+          <span class="accent-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v3H7v3h3v6h3v-6h3l1-3h-4v-3c0-.6.4-1 1-1z"></path>
+            </svg>
+          </span>
+          <div>
+            <strong>Facebook</strong>
+            <p class="muted"><a href="#" target="_blank" rel="noopener">facebook.com/ankawebdesign</a></p>
+          </div>
+        </div>
+
+        <!-- YouTube (framed) -->
+        <div class="contact-item" style="border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px; background:rgba(255,255,255,.03); margin-top:12px;">
+          <span class="accent-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12s0-4-1-6-3-2-9-2-8 1-9 2-1 6-1 6 0 4 1 6 3 2 9 2 8-1 9-2 1-6 1-6z"></path>
+              <path d="M10 15V9l6 3-6 3z"></path>
+            </svg>
+          </span>
+          <div>
+            <strong>YouTube</strong>
+            <p class="muted"><a href="#" target="_blank" rel="noopener">youtube.com/@ankawebdesign</a></p>
+          </div>
+        </div>
+
+        <!-- LinkedIn (framed) -->
+        <div class="contact-item" style="border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px; background:rgba(255,255,255,.03); margin-top:12px;">
+          <span class="accent-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </span>
+          <div>
+            <strong>LinkedIn</strong>
+            <p class="muted"><a href="#" target="_blank" rel="noopener">linkedin.com/company/ankawebdesign</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <!-- Footer (from index.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">ANKA WEB DESIGN</a>
+          <p class="footer-about">Crafting websites that turn visitors into customers.</p>
+          <div class="footer-contact">
+            <span>ankawebdesign@gmail.com</span>
+            <span>+66 123 456 789</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-menu">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-menu">
+            <li><a href="#">Style Guide</a></li>
+            <li><a href="#">Licenses</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay in touch</h4>
+          <form class="newsletter-form" id="demoNewsletter">
+            <input type="email" placeholder="Your email" aria-label="Email for newsletter"/>
+            <button type="submit" class="btn-submit">→</button>
+          </form>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="4" y="4" width="16" height="16" rx="4"/>
+                <circle cx="18" cy="6" r="1.5"/>
+                <circle cx="12" cy="12" r="4.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"/>
+                <rect x="4" y="9" width="4" height="11"/>
+                <circle cx="6" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Quick answers -->
-    <section class="quick-answers">
-      <div class="container">
-        <h2 class="section-title">quick answers</h2>
-        <div class="answers-grid">
-          <div><strong>Response time:</strong> within 24h</div>
-          <div><strong>Office hours:</strong> Mon–Fri, 9am–6pm ICT</div>
-          <div><strong>Project start:</strong> usually within 2 weeks</div>
-        </div>
+      <div class="footer-bottom">
+        <p>© 2025 ANKA WEB DESIGN. All rights reserved. <a href="#">Privacy</a> | <a href="#">Terms</a></p>
       </div>
-    </section>
-  </main>
+    </div>
+  </footer>
 
-  <footer class="site-footer"><div class="container footer-container"><div class="footer-brand"><a href="index.html" class="logo">ANKA</a><p>© 2025 ANKA WEB DESIGN<br>Phuket / Remote</p></div><div class="footer-links"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="footer-social"><a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="18" cy="6" r="1.5"/><circle cx="12" cy="12" r="4.5"/></svg></a><a href="#" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z"/><rect x="4" y="9" width="4" height="11"/><circle cx="6" cy="4" r="2"/></svg></a><a href="#" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></div></div><div class="footer-legal"><small>Privacy & terms</small></div></footer>
-
-  <div class="modal" id="projectModal" role="dialog" aria-modal="true" hidden><div class="modal-overlay"></div><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-body"></div></div></div>
-  <div class="toast" id="successToast">Message sent (demo) – we’ll be in touch.</div>
-  <script src="assets/js/work-data.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

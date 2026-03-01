@@ -42,10 +42,11 @@
   <!-- Sticky nav -->
   <header class="site-header">
     <div class="container header-container">
-      <a href="index.html" class="logo" aria-label="ANKA home">ANKA WEB DESIGN</a>
-      <button class="mobile-menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+    <a href="index.html" class="logo" aria-label="ANKA home">
+  <img src="assets/img/anka-logo.png" alt="" class="logo-image">
+  <span class="logo-text">ANKA WEB DESIGN</span>
+</a>
+      
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="services.html">Services</a></li>
@@ -59,78 +60,83 @@
   </header>
 
   <main id="main-content">
-    <!-- Hero with moving background -->
-    <section class="hero moving-bg">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1 class="display">Modern <br>websites that <span class="accent">convert.</span></h1>
-          <p class="hero-sub">Premium web design for any industry. We craft digital experiences that feel unforgettable.</p>
-          <div class="hero-ctas">
-            <a href="work.html" class="btn btn-primary">View Work</a>
-            <a href="contact.html" class="btn btn-outline">Book a Call</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="blob"></div>
-          <div class="grid-overlay"></div>
-          <!-- New: rotating text -->
-          <div class="rotating-tags">
-            <span>ANKA WEB DESIGN</span><span>NETWORK SOLUTIONS</span><span>PREMIUM WEBSITES</span><span>LIFETIME GUARANTEE</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Moving stripe (marquee) -->
-    <div class="marquee-strip">
-      <div class="marquee-content">
-        ANKA WEB DESIGN • NETWORK SOLUTIONS • UNIQUE IDEAS • ANKA WEB DESIGN • NETWORK SOLUTIONS • UNIQUE IDEAS • ANKA WEB DESIGN • NETWORK SOLUTIONS • UNIQUE IDEAS •
+<!-- Hero – refined, no moving background -->
+<section class="hero-refined">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1 class="display">Designed to Be Seen.  <span class="accent">Built to Convert.</span></h1>
+      <br><br>
+      <div class="hero-ctas">
+        <a href="work.html" class="btn btn-primary">View Work</a>
+        <a href="contact.html" class="btn btn-outline">Book a Call</a>
       </div>
     </div>
+    <div class="hero-visual-refined" aria-hidden="true">
+      <!-- Abstract geometric shapes -->
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <!-- Subtle glow -->
+      <div class="hero-glow"></div>
+    </div>
+  </div>
+</section>
+<br><br>
+    <!-- Moving stripe (marquee) -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span>ANKA WEB DESIGN</span>
+      <span>NETWORK SOLUTIONS</span>
+      <span>UNIQUE IDEAS</span>
+      <span>ANKA WEB DESIGN</span>
+      <span>NETWORK SOLUTIONS</span>
+      <span>UNIQUE IDEAS</span>
+    </div>
+<br>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-content" aria-hidden="true">
+      <span>ANKA WEB DESIGN</span>
+      <span>NETWORK SOLUTIONS</span>
+      <span>UNIQUE IDEAS</span>
+      <span>ANKA WEB DESIGN</span>
+      <span>NETWORK SOLUTIONS</span>
+      <span>UNIQUE IDEAS</span>
+    </div>
+  </div>
+</div>
 
 
     <!-- What we do – interactive cards -->
     <!-- What we do – interactive cards with glassmorphism and animated borders -->
-<section class="services-preview">
+<section class="services-preview section-block surface-1" style="border-top: 1px solid var(--border);">
   <div class="container">
-    <h2 class="section-title">what we do</h2>
-    <div class="interactive-card-grid">
-      <div class="service-card interactive">
-        <span class="service-icon">✧</span>
-        <h3>Web Design</h3>
-        <p>Atmospheric, user‑centred layouts that tell your story.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem;">
+        <h2 class="section-title" style="margin-bottom: 0;">What we do</h2>
+        <a href="services.html" style="color: var(--accent); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;">Full Methodology →</a>
+    </div>
+
+    <div class="interactive-card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; background: var(--border);">
+      
+      <div class="service-card" style="background: var(--bg-dark); padding: 4rem 3rem; transition: background 0.3s ease;">
+        <span style="font-family: serif; font-style: italic; color: var(--accent); display: block; margin-bottom: 2rem;">01</span>
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 400;">Bespoke Design</h3>
+        <p style="color: var(--text-secondary); font-weight: 300;">Visual narratives tailored for luxury hotels, resorts, and high-end culinary venues.</p>
       </div>
-      <div class="service-card interactive">
-        <span class="service-icon">⚙️</span>
-        <h3>Development</h3>
-        <p>Semantic, performance‑first code – vanilla or modern stacks.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
+
+      <div class="service-card" style="background: var(--bg-dark); padding: 4rem 3rem; transition: background 0.3s ease;">
+        <span style="font-family: serif; font-style: italic; color: var(--accent); display: block; margin-bottom: 2rem;">02</span>
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 400;">Technical Build</h3>
+        <p style="color: var(--text-secondary); font-weight: 300;">Clean, performance-first engineering ensuring your site loads as fast as your service.</p>
       </div>
-      <div class="service-card interactive">
-        <span class="service-icon">◈</span>
-        <h3>Branding</h3>
-        <p>Quiet visual identities that feel premium and ownable.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
+
+      <div class="service-card" style="background: var(--bg-dark); padding: 4rem 3rem; transition: background 0.3s ease;">
+        <span style="font-family: serif; font-style: italic; color: var(--accent); display: block; margin-bottom: 2rem;">03</span>
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 400;">Growth Strategy</h3>
+        <p style="color: var(--text-secondary); font-weight: 300;">Conversion pathways designed to turn international visitors into confirmed guests.</p>
       </div>
-      <div class="service-card interactive">
-        <span class="service-icon">⌲</span>
-        <h3>Landing Pages</h3>
-        <p>High‑conversion, campaign‑focused single pages.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
-      <div class="service-card interactive">
-        <span class="service-icon">🔍</span>
-        <h3>SEO Basics</h3>
-        <p>Structure, speed and semantics – the organic foundation.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
-      <div class="service-card interactive">
-        <span class="service-icon">⟲</span>
-        <h3>Maintenance</h3>
-        <p>Care, updates and peace of mind.</p>
-        <a href="services.html" class="card-link">Learn more →</a>
-      </div>
+
     </div>
   </div>
 </section>
@@ -138,7 +144,7 @@
     <!-- Portfolio showcase – live demos -->
     <!-- Portfolio showcase – live demos (static advanced cards) -->
 <!-- Portfolio showcase – live demos with iframes -->
-<section class="portfolio-showcase">
+<section class="portfolio-showcase section-block surface-2">
   <div class="container">
     <h2 class="section-title">Discover Our Portfolio</h2>
     <div class="demo-grid">
@@ -184,87 +190,109 @@
   </div>
 </section>
 
-<!-- Our Approach – Visual Metaphor (replaces process) -->
-<section class="approach-metaphor">
+
+
+
+<!-- Project Enhancements – distinct design -->
+<section class="enhancements-alt section-block surface-2">
   <div class="container">
-    <h2 class="section-title">our approach</h2>
-    <div class="metaphor-container">
-      <div class="circle circle-atmosphere">
-        <div class="circle-glow"></div>
-        <span class="circle-label">Atmosphere</span>
-        <p class="circle-desc">Design that evokes emotion and tells your story.</p>
+    <h2 class="section-title">Ways to enhance your project</h2>
+    <p class="enhancements-intro">Every brand is unique. Mix and match these optional additions to create a solution that fits your vision and goals.</p>
+    
+    <div class="enhancements-alt-grid">
+      
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">🛒</span>
+        <div class="alt-content">
+          <h3>E‑commerce functionality</h3>
+          <p>Sell products or services directly from your site. Includes product management, cart, and secure checkout.</p>
+        </div>
       </div>
-      <div class="circle circle-performance">
-        <div class="circle-glow"></div>
-        <span class="circle-label">Performance</span>
-        <p class="circle-desc">Fast, efficient code that respects your users.</p>
+
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">📅</span>
+        <div class="alt-content">
+          <h3>Booking & reservation system</h3>
+          <p>Let clients book tables, appointments, or tours online. Integrates with your calendar and availability.</p>
+        </div>
       </div>
-      <div class="circle circle-accessibility">
-        <div class="circle-glow"></div>
-        <span class="circle-label">Accessibility</span>
-        <p class="circle-desc">Inclusive by default – for everyone.</p>
+
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">💳</span>
+        <div class="alt-content">
+          <h3>Payment gateway integration</h3>
+          <p>Accept deposits, tickets, or full payments via credit card, PayPal, or local methods.</p>
+        </div>
       </div>
+
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">🌐</span>
+        <div class="alt-content">
+          <h3>Multi‑language support</h3>
+          <p>Reach international audiences with a fully translated site, including language switcher and SEO.</p>
+        </div>
+      </div>
+
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">📊</span>
+        <div class="alt-content">
+          <h3>Advanced analytics & tracking</h3>
+          <p>Set up custom conversion tracking, event monitoring, and detailed reports to measure success.</p>
+        </div>
+      </div>
+
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">⚡</span>
+        <div class="alt-content">
+          <h3>Custom animations & interactions</h3>
+          <p>Engage visitors with subtle scroll effects, micro‑interactions, and motion design that tells your story.</p>
+        </div>
+      </div>
+
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">🔍</span>
+        <div class="alt-content">
+          <h3>Advanced SEO & content strategy</h3>
+          <p>Go beyond basics with keyword research, content planning, and technical SEO to rank higher.</p>
+        </div>
+      </div>
+
+      <div class="enhancement-alt-item">
+        <span class="alt-icon">📱</span>
+        <div class="alt-content">
+          <h3>Custom mobile app integration</h3>
+          <p>Connect your website to a mobile app or create a progressive web app for offline access.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="enhancements-footer">
+      <p>These are just a few possibilities. Every project is different – let's discuss what you need.</p>
+      <a href="contact.html" class="btn btn-primary btn-large">Tell us about your project →</a>
     </div>
   </div>
 </section>
 
 
-    <!-- Pricing -->
-    <section class="pricing">
-      <div class="container">
-        <h2 class="section-title">CHOOSE YOUR PLAN</h2>
-        <div class="pricing-grid-enhanced">
-          <div class="pricing-card">
-            <h3>Starter</h3><p class="price">$2,500</p>
-            <ul class="feature-list"><li>5‑page brochure</li><li>Mobile‑first</li><li>SEO basics</li><li>Contact form</li><li>1 round of revisions</li></ul>
-            <a href="contact.html" class="btn btn-outline">Get started</a>
-          </div>
-          <div class="pricing-card popular">
-            <span class="popular-badge">Most popular</span>
-            <h3>Growth</h3><p class="price">$4,500</p>
-            <ul class="feature-list"><li>10 pages / custom CMS</li><li>Performance audit</li><li>Analytics setup</li><li>3 rounds of revisions</li><li>3 months support</li></ul>
-            <a href="contact.html" class="btn btn-primary">Get started</a>
-          </div>
-          <div class="pricing-card">
-            <h3>Premium</h3><p class="price">$7,500</p>
-            <ul class="feature-list"><li>Bespoke experience</li><li>Advanced interactions</li><li>Priority support</li><li>Unlimited revisions</li><li>12 months support</li></ul>
-            <a href="contact.html" class="btn btn-outline">Get started</a>
-          </div>
-        </div>
-        <p class="pricing-note">Starting at – actual quote after discovery</p>
-      </div>
-    </section>
-
-
 
     <!-- Final CTA -->
     <!-- Final CTA – rich content -->
-<!-- Final CTA – rich content with stats and visual -->
-<section class="cta-advanced">
+<!-- Final CTA – refined, no stats -->
+<section class="cta-advanced section-block surface-3">
   <div class="container">
     <div class="cta-grid">
       <div class="cta-content">
-        <h2 class="cta-title">Ready to launch?</h2>
-        <p class="cta-sub">Let's turn your vision into a digital experience that feels unforgettable. We're just one conversation away.</p>
-        <div class="cta-stats">
-          <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">projects delivered</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">client satisfaction</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">24h</span>
-            <span class="stat-label">response time</span>
-          </div>
+        <h2 class="cta-title">Let's create something unforgettable.</h2>
+        <p class="cta-sub">Every project starts with a conversation. Tell us about your brand, your vision, and the story you want to tell. We'll craft a digital experience that feels as exceptional as the places you represent.</p>
+        <div class="cta-action">
+          <a href="contact.html" class="btn btn-primary btn-large">Start your project →</a>
         </div>
-        <a href="contact.html" class="btn btn-primary btn-large">Start a conversation →</a>
       </div>
       <div class="cta-visual" aria-hidden="true">
         <div class="cta-blob"></div>
         <div class="cta-grid-overlay"></div>
+        <img src="assets/img/anka-logo.png" alt="" class="cta-logo">
       </div>
     </div>
   </div>
@@ -276,10 +304,10 @@
     <div class="footer-grid">
       <!-- Column 1: Company -->
       <div class="footer-col">
-        <a href="index.html" class="footer-logo">ANKA</a>
-        <p class="footer-about">Dark, modern websites for tourism, events, cafes & restaurants. Based in Phuket, working worldwide.</p>
+        <a href="index.html" class="footer-logo">ANKA WEB DESIGN</a>
+        <p class="footer-about">Crafting websites that turn visitors into customers.</p>
         <div class="footer-contact">
-          <span>hello@anka.design</span>
+          <span>ankawebdesign@gmail.com</span>
           <span>+66 123 456 789</span>
         </div>
       </div>

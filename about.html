@@ -14,10 +14,13 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- Header (matches index) -->
   <header class="site-header">
     <div class="container header-container">
-      <a href="index.html" class="logo" aria-label="ANKA home">ANKA WEB DESIGN</a>
+<a href="index.html" class="logo" aria-label="ANKA home">
+  <img src="assets/img/anka-logo.png" alt="" class="logo-image">
+  <span class="logo-text">ANKA WEB DESIGN</span>
+</a>
       <button class="mobile-menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -34,78 +37,59 @@
   </header>
 
   <main id="main-content">
-    <!-- Page header with moving background -->
-    <!-- Page header – advanced -->
-<section class="page-header-advanced moving-bg">
-  <div class="container">
-    <h1 class="page-title-advanced">Studio Story</h1>
-    <p class="page-sub-advanced">Founded in 2020, we’re a remote team of designers & developers who believe in quiet confidence.</p>
+    <!-- Hero‑style About header (inspired by index hero) -->
+    <!-- Hero — Atelier Blueprint (About) -->
+
+
+    </div>
   </div>
 </section>
 
-<!-- Story – advanced editorial card -->
-<section class="story-advanced">
-  <div class="container">
-    <div class="story-card-advanced">
-      <div class="story-quote-mark" aria-hidden="true">“</div>
-      <div class="story-content">
-        <p class="story-text-advanced"><span class="story-dropcap">A</span>NKA was born from the idea that tourism, events, and hospitality brands deserve the same level of craft as luxury fashion. We don’t do templates – we build tailored digital atmospheres that feel like the places they represent. Based in Phuket, working worldwide.</p>
-        <div class="story-signature">
-          <span class="story-signature-line"></span>
-          <span class="story-signature-text">— The ANKA team</span>
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Story – clean two‑column layout -->
+    <section id="story" class="section-block surface-2">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">Our story</h2>
+            <p class="text-large" style="color: var(--text-primary); font-size: 1.3rem; line-height: 1.6;">It started in 2020, when we noticed that hospitality brands deserved the same level of design craft as luxury fashion – but were often overlooked.</p>
+          </div>
+          <div>
+            <p class="text-muted" style="color: var(--text-secondary);">We built ANKA from the ground up, combining Alina’s design intuition with Marcus’s development expertise. Today we’re a remote‑first team, but our roots remain in Phuket, where every project begins with a conversation and a cup of coffee. We don’t do templates – we build tailored digital atmospheres that feel like the places they represent.</p>
+          </div>
         </div>
       </div>
-      <div class="story-decoration">
-        <div class="story-decoration-shape"></div>
-        <div class="story-decoration-shape"></div>
+    </section>
+
+    <!-- Meet the Cofounders – two cards -->
+    <section class="section-block surface-1">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;">Meet the cofounders</h2>
+
+        <div class="team-grid" style="grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px;margin-left:auto;margin-right:auto;">
+          <div class="team-member">
+            <div class="avatar" aria-hidden="true">TC</div>
+            <h3 style="margin-bottom:.25rem;">Tacettin Can Tuncay</h3>
+            <p style="color:var(--text-secondary);margin:0;">Co-founder</p>
+          </div>
+
+          <div class="team-member">
+            <div class="avatar" aria-hidden="true">FC</div>
+            <h3 style="margin-bottom:.25rem;">Furkan Can Cicek</h3>
+            <p style="color:var(--text-secondary);margin:0;">Co-founder</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Our Philosophy – visually rich, icon‑free -->
-<section class="philosophy">
-  <div class="container">
-    <h2 class="section-title">Our Philosophy</h2>
-    <div class="philosophy-grid">
-      
-      <div class="philosophy-card">
-        <div class="philosophy-bg-number">01</div>
-        <div class="philosophy-decoration"></div>
-        <h3>Atmosphere First</h3>
-        <p>Design that evokes emotion, not just layout. Every pixel serves the story.</p>
-      </div>
+<!-- Optional simple CTA (like index's final CTA but without stats) -->
+</main>
 
-      <div class="philosophy-card">
-        <div class="philosophy-bg-number">02</div>
-        <div class="philosophy-decoration"></div>
-        <h3>Performance as Craft</h3>
-        <p>Fast loading is a design feature – we optimise every byte.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-bg-number">03</div>
-        <div class="philosophy-decoration"></div>
-        <h3>Accessibility by Default</h3>
-        <p>Inclusive experiences that welcome everyone, without compromise.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-bg-number">04</div>
-        <div class="philosophy-decoration"></div>
-        <h3>Long‑term Thinking</h3>
-        <p>Code that lasts, relationships that grow. We build for the future.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-  </main>
-
-  <!-- Footer (rich version) -->
+  <!-- Footer (rich version, same as index) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -170,7 +154,7 @@
     </div>
   </footer>
 
-  <!-- Modal and toast -->
+  <!-- Modal and toast (kept for compatibility) -->
   <div class="modal" id="projectModal" role="dialog" aria-modal="true" hidden>
     <div class="modal-overlay"></div>
     <div class="modal-content"><button class="modal-close">&times;</button><div class="modal-body"></div></div>

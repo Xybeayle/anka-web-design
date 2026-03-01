@@ -215,6 +215,7 @@ if (glow) {
   }
   animateGlow();
   // 3D tilt on cards
+  }
 const tiltCards = document.querySelectorAll('.service-card, .work-card, .pricing-card');
 tiltCards.forEach(card => {
   card.addEventListener('mousemove', (e) => {
@@ -252,5 +253,5 @@ if (demoGrid && window.workData) {
     demoGrid.appendChild(card);
   });
 }
-}
+
 })();
